@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-white: #fff;
+    --color-gradient: #3f709c;
+}
+
+body {
+    margin: 1em;
+    /* border: 1px solid red; */
+}
+
+main {
+    padding: 15px;
+    border: 2px solid red;
+}
+
+section.section-1 {
+    display: flex;
+    /* align-self: flex-start ; */
+    justify-content: space-around;
+    background-color: #171d25;
+
+}
+
+section.section-1 nav.nav-1 {
+    display: flex;
+}
+
+section ul {
+    display: flex;
+    justify-content: center;
+}
+
+section ul.lista-1, ul.lista-2 {
+    gap: 10px;
+}
+
+section ul.lista-1 {
+    /* align-items: center; */
+    font-weight: bolder;
+}
+
+section ul.lista-3 {
+    gap: 30px;
+    background-color: var(--color-gradient);
+    padding: 10px;
+}
+
+section.section-1 nav.nav-1 > ul {
+    display: flex;
+    align-items: center;
+}
+
+section ul > li {
+    list-style-type: none;
+
+}
+
+section ul > li a {
+    text-decoration: none;
+    color: var(--color-white);
+
+}
+
+section.formulario {
+    /* border: 3px solid black   */
+}
+
+section.formulario form {
+    display: grid;
+    grid-template-areas: 
+    "nome email cep uf"
+    "data-nascimento telefone estado-civil estado-civil"
+    "textarea textarea estado-civil estado-civil"
+    "textarea textarea estado-civil estado-civil"
+    "submit submit submit submit";
+    gap: 1rem;
+    align-items: center;
+}
+
+input[type=text],
+input[type=email] {
+    width: 100%;
+}
+
+section > h1 {
+    text-align: center;
+    padding: 8px;
+}
+
+.nome {
+    grid-area: nome;
+}
+
+.email {
+    grid-area: email;
+}
+
+.cep {
+    grid-area: cep;
+}
+
+.uf {
+    grid-area: uf;
+}
+
+.data-nascimento {
+    grid-area: data-nascimento;
+}
+
+.telefone {
+    grid-area: telefone;
+}
+
+.estado-civil{
+    grid-area: estado-civil;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid black;
+    gap: 0.3rem;
+}
+
+.textarea {
+    grid-area: textarea;
+}
+
+.submit {
+    grid-area: submit;
+    width: 100%;
+}
